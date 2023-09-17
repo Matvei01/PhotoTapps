@@ -25,7 +25,10 @@ final class PhotosViewController: UICollectionViewController {
         super.viewDidLoad()
         configure()
     }
-    
+}
+
+// MARK: - Private Methods
+extension PhotosViewController {
     private func configure() {
         collectionView.register(CustomPhotoViewCell.self, forCellWithReuseIdentifier: photoCell)
         
@@ -45,9 +48,9 @@ extension PhotosViewController {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photoCell,
                                                       for: indexPath) as! CustomPhotoViewCell
-        let imageName = photos[indexPath.item]
+        let photo = photos[indexPath.item]
         
-        cell.dogImageView.image = UIImage(named: imageName.photoName)
+        cell.configure(photo)
         
         return cell
     }
@@ -55,7 +58,9 @@ extension PhotosViewController {
 
 // MARK: - UICollectionViewDelegate
 extension PhotosViewController {
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView,
+                                 didSelectItemAt indexPath: IndexPath) {
+        
         let photoVC = PhotoViewController()
         let photo = photos[indexPath.item]
         photoVC.photo = photo

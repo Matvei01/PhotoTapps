@@ -7,22 +7,22 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController {
+final class PhotoViewController: UIViewController {
     
     // MARK: - Public Properties
-    var photo: Photo!
+    var photo: Photo?
     
     // MARK: -  UI Elements
     private lazy var dogImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: photo.photoName)
+        imageView.image = photo?.name
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
         
         return imageView
     }()
     
-    private lazy var shereButton: UIButton = {
+    private lazy var shareButton: UIButton = {
         var attributes = AttributeContainer()
         attributes.font = .systemFont(ofSize: 18)
         attributes.foregroundColor = .systemBackground
@@ -34,7 +34,7 @@ class PhotoViewController: UIViewController {
         let button = UIButton(
             configuration: buttonConfiguration,
             primaryAction: UIAction { [unowned self] _ in
-                shereButtonTapped()
+                shareButtonTapped()
             })
         
         return button
@@ -52,13 +52,23 @@ extension PhotoViewController {
     private func configure() {
         view.backgroundColor = UIColor(named: "photoVCBackgroundcolor")
         view.addSubview(dogImageView)
-        view.addSubview(shereButton)
+        view.addSubview(shareButton)
         
         setConstraints()
     }
     
-    private func shereButtonTapped() {
+    private func shareButtonTapped() {
+        let shareVC = UIActivityViewController(
+            activityItems: [photo?.name ?? UIImage()],
+            applicationActivities: nil
+        )
+        shareVC.completionWithItemsHandler = { _, bool, _, _ in
+            if bool {
+                print("Успешно!")
+            }
+        }
         
+        present(shareVC, animated: true)
     }
 }
 
@@ -86,14 +96,14 @@ extension PhotoViewController {
             ]
         )
         
-        shereButton.translatesAutoresizingMaskIntoConstraints = false
+        shareButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate(
             [
-                shereButton.centerXAnchor.constraint(
+                shareButton.centerXAnchor.constraint(
                     equalTo: view.centerXAnchor
                 ),
-                shereButton.bottomAnchor.constraint(
+                shareButton.bottomAnchor.constraint(
                     equalTo: view.bottomAnchor,
                     constant: -36
                 )
