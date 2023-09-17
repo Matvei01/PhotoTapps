@@ -26,7 +26,10 @@ final class CustomPhotoViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+}
+
+// MARK: - Constraints
+extension CustomPhotoViewCell {
     private func setConstraints() {
         dogImageView.translatesAutoresizingMaskIntoConstraints = false
         

@@ -9,6 +9,7 @@ import UIKit
 
 final class PhotosViewController: UICollectionViewController {
     
+    // MARK: - Private Properties
     private let photos = Photo.getPhotos()
     
     private let photoCell = "photo"
@@ -19,6 +20,7 @@ final class PhotosViewController: UICollectionViewController {
         top: 20, left: 20, bottom: 20, right: 20
     )
     
+    // MARK: - Life cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
@@ -29,11 +31,13 @@ final class PhotosViewController: UICollectionViewController {
         
         title = "Photo Tapps"
     }
-    
-    // MARK: UICollectionViewDataSource
+}
+
+// MARK: - UICollectionViewDataSource
+extension PhotosViewController {
     override func collectionView(_ collectionView: UICollectionView,
                                  numberOfItemsInSection section: Int) -> Int {
-        photos.names.count
+        photos.count
     }
     
     override func collectionView(_ collectionView: UICollectionView,
@@ -41,11 +45,22 @@ final class PhotosViewController: UICollectionViewController {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photoCell,
                                                       for: indexPath) as! CustomPhotoViewCell
-        let imageName = photos.names[indexPath.item]
+        let imageName = photos[indexPath.item]
         
-        cell.dogImageView.image = UIImage(named: imageName)
+        cell.dogImageView.image = UIImage(named: imageName.photoName)
         
         return cell
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+extension PhotosViewController {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let photoVC = PhotoViewController()
+        let photo = photos[indexPath.item]
+        photoVC.photo = photo
+        
+        present(photoVC, animated: true)
     }
 }
 

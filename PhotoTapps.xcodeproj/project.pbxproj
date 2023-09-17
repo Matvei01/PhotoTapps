@@ -14,6 +14,7 @@
 		A0C515572AB3230500C67338 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C515562AB3230500C67338 /* PhotosViewController.swift */; };
 		A0C515592AB43B1200C67338 /* CustomPhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C515582AB43B1200C67338 /* CustomPhotoViewCell.swift */; };
 		A0C5157F2AB6F98500C67338 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C5157E2AB6F98500C67338 /* Photo.swift */; };
+		A0C515832AB7172800C67338 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C515822AB7172800C67338 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A0C515562AB3230500C67338 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		A0C515582AB43B1200C67338 /* CustomPhotoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPhotoViewCell.swift; sourceTree = "<group>"; };
 		A0C5157E2AB6F98500C67338 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		A0C515822AB7172800C67338 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				A0C515422AB3220900C67338 /* AppDelegate.swift */,
 				A0C515442AB3220900C67338 /* SceneDelegate.swift */,
 				A0C515562AB3230500C67338 /* PhotosViewController.swift */,
+				A0C515822AB7172800C67338 /* PhotoViewController.swift */,
 				A0C515582AB43B1200C67338 /* CustomPhotoViewCell.swift */,
 				A0C5157E2AB6F98500C67338 /* Photo.swift */,
 				A0C5154B2AB3220A00C67338 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 				A0C515452AB3220900C67338 /* SceneDelegate.swift in Sources */,
 				A0C515592AB43B1200C67338 /* CustomPhotoViewCell.swift in Sources */,
 				A0C5157F2AB6F98500C67338 /* Photo.swift in Sources */,
+				A0C515832AB7172800C67338 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
