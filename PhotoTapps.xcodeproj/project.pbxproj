@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		A0C515432AB3220900C67338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C515422AB3220900C67338 /* AppDelegate.swift */; };
 		A0C515452AB3220900C67338 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C515442AB3220900C67338 /* SceneDelegate.swift */; };
-		A0C515472AB3220900C67338 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C515462AB3220900C67338 /* ViewController.swift */; };
-		A0C5154A2AB3220900C67338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0C515482AB3220900C67338 /* Main.storyboard */; };
 		A0C5154C2AB3220A00C67338 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C5154B2AB3220A00C67338 /* Assets.xcassets */; };
 		A0C5154F2AB3220A00C67338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0C5154D2AB3220A00C67338 /* LaunchScreen.storyboard */; };
+		A0C515572AB3230500C67338 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C515562AB3230500C67338 /* PhotosViewController.swift */; };
+		A0C515592AB43B1200C67338 /* CustomPhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C515582AB43B1200C67338 /* CustomPhotoViewCell.swift */; };
+		A0C5157F2AB6F98500C67338 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C5157E2AB6F98500C67338 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A0C5153F2AB3220900C67338 /* PhotoTapps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoTapps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C515422AB3220900C67338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0C515442AB3220900C67338 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A0C515462AB3220900C67338 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A0C515492AB3220900C67338 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0C5154B2AB3220A00C67338 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0C5154E2AB3220A00C67338 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0C515502AB3220A00C67338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0C515562AB3230500C67338 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		A0C515582AB43B1200C67338 /* CustomPhotoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPhotoViewCell.swift; sourceTree = "<group>"; };
+		A0C5157E2AB6F98500C67338 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				A0C515422AB3220900C67338 /* AppDelegate.swift */,
 				A0C515442AB3220900C67338 /* SceneDelegate.swift */,
-				A0C515462AB3220900C67338 /* ViewController.swift */,
-				A0C515482AB3220900C67338 /* Main.storyboard */,
+				A0C515562AB3230500C67338 /* PhotosViewController.swift */,
+				A0C515582AB43B1200C67338 /* CustomPhotoViewCell.swift */,
+				A0C5157E2AB6F98500C67338 /* Photo.swift */,
 				A0C5154B2AB3220A00C67338 /* Assets.xcassets */,
 				A0C5154D2AB3220A00C67338 /* LaunchScreen.storyboard */,
 				A0C515502AB3220A00C67338 /* Info.plist */,
@@ -127,7 +130,6 @@
 			files = (
 				A0C5154F2AB3220A00C67338 /* LaunchScreen.storyboard in Resources */,
 				A0C5154C2AB3220A00C67338 /* Assets.xcassets in Resources */,
-				A0C5154A2AB3220900C67338 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +140,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0C515472AB3220900C67338 /* ViewController.swift in Sources */,
+				A0C515572AB3230500C67338 /* PhotosViewController.swift in Sources */,
 				A0C515432AB3220900C67338 /* AppDelegate.swift in Sources */,
 				A0C515452AB3220900C67338 /* SceneDelegate.swift in Sources */,
+				A0C515592AB43B1200C67338 /* CustomPhotoViewCell.swift in Sources */,
+				A0C5157F2AB6F98500C67338 /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A0C515482AB3220900C67338 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A0C515492AB3220900C67338 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A0C5154D2AB3220A00C67338 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,9 +288,8 @@
 				INFOPLIST_FILE = PhotoTapps/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +297,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = matveiKhlestov.PhotoTapps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,9 +318,8 @@
 				INFOPLIST_FILE = PhotoTapps/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +327,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = matveiKhlestov.PhotoTapps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
